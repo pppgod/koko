@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/default_layout}">
+<th:block layout:fragment="head">
+  <title>Signup Page</title>
+  <!--/* css */-->
+  <link th:href="@{/css/common.css}" rel="stylesheet" />
+</th:block>
+<body>
+<div layout:fragment="content" class="content">
+  <h2>Create Account</h2>
+  <div>
+    <form method="post">
+      <input type="email" name="email" />
+      <input type="password" name="password" />
+      <input type="password" name="confirmPass" />
+      <input type="submit" value="continue"/>
+    </form>
+  </div>
+</div>
+<th:block layout:fragment="footer" th:include="@{/fragments/footer}" />
+</body>
+</html>
